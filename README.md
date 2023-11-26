@@ -80,7 +80,7 @@ Whether the typing animation should start immediately. Defaults to `false`.
 
 A callback function that will be called when the typing animation completes.
 
-### `AnimatedTypingRef`  Methods:
+## AnimatedTypingRef  Methods:
 
 #### `start()`
 

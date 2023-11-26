@@ -1,18 +1,14 @@
 import * as React from 'react';
-
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-text-typing-animation';
+import { StyleSheet, View } from 'react-native';
+import AnimatedTyping from 'react-native-text-typing-animation';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <AnimatedTyping
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolore temporibus quisquam asperiores obcaecati similique ad quasi explicabo tempore iste quos aperiam a earum dignissimos, quam voluptates ipsa! Est, reiciendis."
+        style={{ fontWeight: 'bold', fontSize: 20, color: 'black' }}
+      />
     </View>
   );
 }
@@ -20,12 +16,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+    padding: 20,
   },
 });

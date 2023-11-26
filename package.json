@@ -27,9 +27,9 @@
   ],
   "scripts": {
     "example": "yarn workspace react-native-text-typing-animation-example",
-    "test": "jest",
+    "test": "jest -u",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "lint": "eslint . --fix",
     "clean": "del-cli lib",
     "prepare": "bob build",
     "release": "release-it"
@@ -57,16 +57,20 @@
     "@types/jest": "^28.1.2",
     "@types/react": "~17.0.21",
     "@types/react-native": "0.70.0",
+    "@types/react-test-renderer": "^18.0.7",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
     "commitlint": "^17.0.2",
     "del-cli": "^5.0.0",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-config-universe": "^12.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^28.1.1",
     "prettier": "^2.0.5",
     "react": "18.2.0",
     "react-native": "0.72.6",
     "react-native-builder-bob": "^0.20.0",
+    "react-test-renderer": "^18.2.0",
     "release-it": "^15.0.0",
     "typescript": "^5.0.2"
   },
@@ -116,25 +120,15 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@react-native",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "quoteProps": "consistent",
-          "singleQuote": true,
-          "tabWidth": 2,
-          "trailingComma": "es5",
-          "useTabs": false
-        }
-      ]
-    }
+      "universe"
+    ]
   },
   "eslintIgnore": [
     "node_modules/",
-    "lib/"
+    "lib/",
+    "example/babel.config.js",
+    "example/metro.config.js",
+    "example/webpack.config.js"
   ],
   "prettier": {
     "quoteProps": "consistent",

@@ -11,10 +11,11 @@ export default function App() {
     <View style={styles.container}>
       <AnimatedTyping
         ref={animationTextRef}
+        curserColor="blue"
+        style={{ fontSize: 20, fontWeight: '900' }}
         started
-        text="This is a animated text"
-        style={{ fontWeight: 'bold', fontSize: 20, color: 'black' }}
-        onCompleted={() => console.log('Completed')}
+        text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque,
+        nesciunt odio accusantium"
       />
       <Button title="Start" onPress={() => animationTextRef.current?.start()} />
       <Button title="Stop" onPress={() => animationTextRef.current?.pause()} />

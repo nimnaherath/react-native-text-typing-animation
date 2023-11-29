@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`animated typing component component render correctly 1`] = `
+<View
+  style={
+    Object {
+      "flexWrap": "nowrap",
+    }
+  }
+>
+  <Text />
+</View>
+`;
+
+exports[`animated typing component it can change style 1`] = `
+<View
+  style={
+    Object {
+      "flexWrap": "nowrap",
+    }
+  }
+>
+  <Text />
+</View>
+`;
